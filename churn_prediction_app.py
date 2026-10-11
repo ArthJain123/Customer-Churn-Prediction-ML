@@ -75,6 +75,22 @@ with tab1:
       stream_tv = st.selectbox("Did you have **Streamling TV Subscription** ?",['Yes','No','No phone service'])
 
 
+with tab2:
+
+  data = pd.read_csv("Customer_Churn_Prediction.csv")
+
+  st.dataframe(data,use_container_width = True)
+
+
+
+if  st.button("Enter Your Details:"):
+    st.balloons()
+    st.success("Your Information Get Stored")
+
+else:
+    st.write("Please enter your details")
+
+
 # ============================================== Author(About Me) ==============================================
 
 with st.sidebar:
