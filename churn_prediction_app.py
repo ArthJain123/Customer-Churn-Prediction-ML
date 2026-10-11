@@ -26,7 +26,7 @@ with tab1:
   contract = st.selectbox("Enter your Contract term:",['Month-to-month','One year','Two year'])
 
 
-col1,col2,col3 = st.columns(3)
+  col1,col2,col3 = st.columns(3)
 
   with col1:
     with st.container(border = True):
@@ -73,3 +73,37 @@ col1,col2,col3 = st.columns(3)
 
       stream_movie = st.selectbox("Did you have **Streaming Movie Subscription** ?",['Yes','No','No phone service'])
       stream_tv = st.selectbox("Did you have **Streamling TV Subscription** ?",['Yes','No','No phone service'])
+
+
+# ============================================== Author(About Me) ==============================================
+
+with st.sidebar:
+
+     st.header("About Me")
+    
+     st.image("https://media.licdn.com/dms/image/v2/D4D03AQGGR3gc6WIYDA/profile-displayphoto-crop_800_800/B4DaDs9QC8GsAI-/0/1790681876550?e=1793232000&v=beta&t=gU_2TjebvQ7q9jDCwPdQ3WfwX0nVp3BwBb3uwY5y3WM",width = 250)
+
+
+
+     st.markdown(f"""
+     Hello {name} !!!
+
+     Myself **Arth Jain**
+
+     About Me: 
+     **GitHub link** -> [Click Here](https://github.com/ArthJain123/Customer-Churn-Prediction-ML) \n
+     **Linkedin Profile** -> [Connect with me](https://www.linkedin.com/in/arth-jain-278191385)
+
+     It was my 6th Project
+     **"Customer Churn Prediction"**.
+
+     For this project
+     I have to predict
+     from a given data that
+     wheather a Customer will Stay/Churn or Leave/No Churn.
+
+     The Targetting Feature(y) is **"Churn"**
+     where "Yes" indicates Customer Leave
+     and "No" indicates Customer Stay.
+
+     """)
