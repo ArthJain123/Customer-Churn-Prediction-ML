@@ -24,3 +24,52 @@ with tab1:
     tenure = st.slider("Enter Your tenure/Spending Time:",0,100,20)
 
   contract = st.selectbox("Enter your Contract term:",['Month-to-month','One year','Two year'])
+
+
+col1,col2,col3 = st.columns(3)
+
+  with col1:
+    with st.container(border = True):
+      month_c = st.number_input("Enter your **Monthly Senditure**",0,200,50)
+
+      total_c = st.number_input("Enter your **Total Spenditure**",0,10000,500)
+
+      pay_method = st.selectbox("Please enter your **Payment Method**",['Electronic check','Mailed check','Bank transfer(automatic)','Credit card(automatic)'])
+
+      # Here , o is Online
+      o_security = st.selectbox("Did you have **Online Security** ?",['Yes','No','No phone service'])
+
+      o_backup = st.selectbox("Did you have **Online Backup** ?",['Yes','No','No phone service'])
+
+
+
+  with col2:
+    with st.container(border = True):
+      partner = st.selectbox("Is there your **Life Partner**:",["Yes","No"])
+
+      senior_c = st.selectbox("Are you a **Senior Citizen**:",["Yes","No"])
+
+      if senior_c == "yes":
+        x = 1
+      else:
+        x = 0
+
+      depend = st.radio("Are you a **Depended** Person ?:",["Yes","No"])
+
+      ml = st.radio("Did you have **Multiple Lines** ?",['Yes','No','No phone service'])
+
+      ps = st.radio("Did you have a **Phone Service** ?",["Yes","No"])
+
+
+
+  with col3:
+    with st.container(border = True):
+
+      internet_s = st.selectbox("Which **Internet Service** are your having ?:",['DSL','Fiber optic','No'])
+
+      dp = st.selectbox("Are you have **Device Protection** ?",['Yes','No','No phone service'])
+
+      tech_support = st.selectbox("Did you have **Tech Support** ?",['Yes','No','No phone service'])
+
+      stream_movie = st.selectbox("Did you have **Streaming Movie Subscription** ?",['Yes','No','No phone service'])
+      stream_tv = st.selectbox("Did you have **Streamling TV Subscription** ?",['Yes','No','No phone service'])
