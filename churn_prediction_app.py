@@ -5,7 +5,7 @@ import pandas as pd
 # ========================================= Customer Details ==========================================
 
 with st.container(border = True):
-     st.image("https://i.pinimg.com/736x/16/a9/17/16a91717984d7812f7b11194c0179f7d.jpg",width = 600,use_container_width = True)
+     st.image("https://images.unsplash.com/photo-1607453361165-c629a0d1839d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",width = 600,use_container_width = True)
 
 st.title("Customer Churn Prediction")
 
