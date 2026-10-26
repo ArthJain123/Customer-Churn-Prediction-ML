@@ -159,7 +159,7 @@ with st.sidebar:
 
 with tab2:
 
-  data = pd.read_csv("/content/Customer_Churn_Prediction.csv")
+  data = pd.read_csv("Customer_Churn_Prediction.csv")
 
   st.dataframe(data,use_container_width = True)
 
