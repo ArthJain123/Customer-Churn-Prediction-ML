@@ -20,8 +20,9 @@ with st.container(border = True):
 st.title("Customer Churn Prediction")
 
 
-
-tabs = ["| User's Details **Store Here!** |","| The DataSet Information |","| Model Performance |"]
+tabs = ["👤 User's Details",
+        "📊 Dataset Information",
+        "🤖 Model Performance"]
 
 tab1,tab2,tab3 = st.tabs(tabs)
 
@@ -108,53 +109,62 @@ with tab1:
       ml = st.radio("Did you have **Multiple Lines** ?",state)
 
       ps = st.radio("Did you have a **Phone Service** ?",condition)
+        
 
-
-  if st.button(" **ENTER YOUR DETAILS** "):
+  if st.button("Predict Customer Churn",type = "primary"):
+    st.success("Your Details were stored successfully")
     st.balloons()
-    st.success(" **Yay !**,Your Information Get Stored ")
 
   else:
-    st.write("Please Submit Your Details")
-
+    st.info("Enter the customer details and click Predict Customer Churn")
 
 
 # ============================================== Author(About Me) ==============================================
 
-
 with st.sidebar:
 
-     st.header("About Me")
+    with st.container(border = True):
+      st.title(":blue[About Me]")
 
-     st.image("https://media.licdn.com/dms/image/v2/D4D03AQGGR3gc6WIYDA/profile-displayphoto-crop_800_800/B4DaDs9QC8GsAI-/0/1790681876550?e=1793232000&v=beta&t=gU_2TjebvQ7q9jDCwPdQ3WfwX0nVp3BwBb3uwY5y3WM",width = 250)
+      st.image("https://media.licdn.com/dms/image/v2/D4D03AQGGR3gc6WIYDA/profile-displayphoto-crop_800_800/B4DaDs9QC8GsAI-/0/1790681876550?e=1795651200&v=beta&t=ZpbSMFPsF6J732OTU7TtVhzrNRnHoHHBQbHZuLWl8N0")
 
-     st.write(f"""
-     Hello {name} !!!
+    
+    st.write(f"""
+    Hello {name} ,
+    
+    My name is **:blue[Arth Jain]**.\n
+    Nice to meet you.
 
-     Myself **Arth Jain**
+    My social profiles ->
+    ----
+    """)
+    
+    with st.container(border = True):
 
-     ---
+        st.write("""  
+        
+        - **GitHub**  ->  [You can view the project here](https://github.com/ArthJain123/Customer-Churn-Prediction-ML)
 
-     About Me:
-     
-     **GitHub link** -> [Click Here](https://github.com/ArthJain123/Customer-Churn-Prediction-ML) 
-     **Linkedin Profile** -> [Connect with me](https://www.linkedin.com/in/arth-jain-278191385)
+        - **LinkedIn** -> [Connect with me](https://www.linkedin.com/in/arth-jain-278191385)
 
-     It was my 6th Project
-     **"Customer Churn Prediction"**.
+        """)
 
-     ---
+    st.write("""
+    ----
 
-     For this project
-     I have to predict
-     from the given data that
-     wheather a Customer will Stay/Churn or Leave/No Churn.
+    It was my **6th Project (Customer Churn Prediction)**
 
-     The Targetting Feature(y) is **"Churn"**
-     where "Yes" indicates Customer Leave
-     and "No" indicates Customer Stay.
-
-     """)
+    This project predicts whether a customer
+    is likely to stay or leave based on their
+    service details and account information.
+    
+    ```
+    Target: Churn Feature
+    
+    [0] as Customer stays
+    [1] as Customer leaves
+    ```
+    """)
 
 
 with tab2:
